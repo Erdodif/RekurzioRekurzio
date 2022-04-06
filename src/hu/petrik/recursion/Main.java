@@ -1,11 +1,15 @@
 package hu.petrik.recursion;
 
+import hu.petrik.recursion.hanoi.Hanoi;
+
 public class Main {
 
     public static void main(String[] args) {
-        //printExceptHanoi();
-        Hanoi.runHanoi(3);
+        printNonHanoi();
+        Hanoi hanoi = new Hanoi(5);
+        hanoi.solve();
     }
+
 
     static void printPyramid() {
         int tall = 12;
@@ -18,7 +22,7 @@ public class Main {
         }
     }
 
-    static void printExceptHanoi(){
+    static void printNonHanoi(){
         System.out.println(Recusives.reapeatString("pff;", 3));
         System.out.println(Recusives.power(2, 4));
         for (int i = 0; i < 10; i++) {

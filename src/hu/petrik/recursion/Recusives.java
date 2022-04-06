@@ -3,7 +3,7 @@ package hu.petrik.recursion;
 import java.util.Arrays;
 
 public class Recusives {
-    static String reapeatString(String string, int repeat) {
+    public static String reapeatString(String string, int repeat) {
         if (repeat > 1) {
             return string + reapeatString(string, repeat - 1);
         }
