@@ -1,13 +1,15 @@
 package hu.petrik.recursion;
 
+import hu.petrik.recursion.bs.Generator;
 import hu.petrik.recursion.hanoi.Hanoi;
 
 public class Main {
 
     public static void main(String[] args) {
-        printNonHanoi();
+        /*printNonHanoi();
         Hanoi hanoi = new Hanoi(5);
-        hanoi.solve();
+        hanoi.solve();*/
+        bsGenerator();
     }
 
 
@@ -31,5 +33,12 @@ public class Main {
         printPyramid();
         System.out.println("ABCDE -> " + Recusives.reverseString("ABCDE"));
         System.out.println(Recusives.sum(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+    }
+
+    static void bsGenerator(){
+        Generator generator = new Generator();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(generator.getSentence((int)(Math.random()*10)+5));
+        }
     }
 }
